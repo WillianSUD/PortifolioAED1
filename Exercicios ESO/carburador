@@ -1,0 +1,45 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Carro cc = new Carro ();
+    
+  }
+}
+
+using System;
+
+// class Carro extends Veiculo 0
+class Carro : Veiculo {
+
+  public Carro(){ 
+  
+    this.acento= 5;
+  }
+  public void setMarca (string marca){
+    this.marca = marca;
+  }
+    
+  public void Retorna(){
+    Console.WriteLine("{0},{1},{2}",acento,marca,carburador);
+  }
+}
+
+using System;
+
+class Veiculo
+{
+ 
+ 
+  protected int acento {get{return acento;} set{acento = value;}}
+
+  protected string marca; 
+  public string Marca{
+    get{return marca;}
+    protected set{this.marca =  value;}
+  }
+
+  protected string tipoCombustivel {get{return tipoCombustivel;} set {this.tipoCombustivel = value;}} 
+
+  protected int carburador = 1; 
+}
